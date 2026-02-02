@@ -1,5 +1,5 @@
 int irSensorPin = 2; 
-int ledPin = 13;    
+int ledPin = 18;    
 void setup() {
   Serial.begin(9600);
   pinMode(irSensorPin, INPUT); 
