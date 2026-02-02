@@ -21,11 +21,11 @@ void loop() {
     return;
   }
   Serial.print("Temperature:  ");
-  Serial.print(Temperature);//23.6
+  Serial.print(Temperature);
   Serial.println(" C");
 
   Serial.print("Humidity:  ");
-  Serial.print(Humidity);//23.6
+  Serial.print(Humidity);
   Serial.println(" %");
 
   delay(1000);
