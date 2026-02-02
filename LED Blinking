@@ -1,12 +1,12 @@
 # IOT-ESP32
 Iot Projects use in Wokwi website
 void setup () {
-serial.begin (115200);
+Serial.begin (115200);
 pinMode(19,OUTPUT);
 }
 void loop (){
 digitalWrite(19,HIGH);
-Delay(1000);
+delay(1000);
 digitalWrite(19,LOW);
-Delay(1000);
+delay(1000);
 }
