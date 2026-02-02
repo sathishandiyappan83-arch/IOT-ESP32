@@ -1,0 +1,22 @@
+#define LIGHT_SENSOR_PIN 36
+void setup(){
+Serial.begni(9600);
+}
+void loop (){
+int analogvalue = analogn(LIGHT_SENSOR_PIN);
+serial.print("Analog value = ");
+serial.print(analogvalue);
+if (analogvalue < 40){
+serila.print(" =>Dark");
+}
+else if (analogvalue <800){
+serial.print(" =>Dim");
+}
+else if (analogvalue<2000){
+serial.print(" =>Light");
+}
+else if (analogvalue<3200){
+serial.print(" =>Very Bright");
+}
+Delay(500);
+}
