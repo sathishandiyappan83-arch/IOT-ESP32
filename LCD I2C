@@ -1,11 +1,12 @@
-#include <Liquidcrystal_I2C.h>
-Liquidcrystal_I2C lcd(0x27);
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);
+
 void setup(){
 lcd.init();
 lcd.backlight();
 lcd.setCursor(0,0);
 lcd.print("LIVE WIRE");
 }
-voil loop (){
-Delay(10);
+void loop (){
+delay(10);
 }
