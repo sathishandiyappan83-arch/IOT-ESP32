@@ -1,0 +1,15 @@
+int potpin=12;
+int ledpin=21;
+void setup() {
+  Serial.begin(9600);
+  pinMode(12,INPUT);
+  pinMode(21,OUTPUT);
+}
+void loop() {
+  int val=analogRead(12);
+  digitalWrite(21, HIGH);
+  delay(val);
+  digitalWrite(21, LOW);
+  delay(val); 
+  Serial.println(val);
+}
