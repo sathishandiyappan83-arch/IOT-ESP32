@@ -1,0 +1,27 @@
+#define DIR_PIN 3
+#define STEP_PIN 2
+
+void setup() {
+  pinMode(STEP_PIN, OUTPUT);
+  pinMode(DIR_PIN, OUTPUT);
+  digitalWrite(STEP_PIN, LOW);
+}
+
+void loop() {
+  digitalWrite(DIR_PIN, HIGH);
+  for (int i = 0; i < 200; i++) {
+    digitalWrite(STEP_PIN, HIGH);
+    digitalWrite(STEP_PIN, LOW);
+    delay(5);
+  }
+
+  delay(500); 
+  digitalWrite(DIR_PIN, LOW); 
+  for (int i = 0; i < 200; i++) {
+    digitalWrite(STEP_PIN, HIGH);
+    digitalWrite(STEP_PIN, LOW);
+    delay(2);
+  }
+
+  delay(1000);
+}
