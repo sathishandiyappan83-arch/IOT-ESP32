@@ -1,0 +1,13 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(28,27,26,22,21,20);
+
+void setup() {
+lcd.begin(16,2);
+lcd.print("HELLO SATHISH!");
+lcd.setCursor(0,1);
+lcd.print("COME LIVEWIRE");
+}
+
+void loop() {
+  delay(1); 
+}
