@@ -1,0 +1,30 @@
+#include "pitches.h"
+#define SPEAKER_PIN 20
+const uint8_t buttonpin[]={13,12,11,10,9,8,7,6};
+const int buttontones[]={
+  NOTE_C4,NOTE_D4,NOTE_E4,NOTE_F4,NOTE_G4,NOTE_A4,NOTE_B4,NOTE_C5};
+  const int numtones = sizeof(buttonpin)/sizeof(buttonpin[0]);
+
+void setup() {
+for (uint8_t i =0 ;i< numtones;i++){
+  pinMode(buttonpin[i], INPUT_PULLUP);
+}
+pinMode(SPEAKER_PIN, OUTPUT);
+}
+
+void loop() {
+  int pitch = 0;
+  for (uint8_t i = 0; i < numtones;i++){
+    if(digitalRead(buttonpin[i])==LOW){
+      pitch = buttontones[i];
+    }
+  }
+  if(pitch){
+    tone(SPEAKER_PIN,pitch);
+  }
+  else
+  {
+    noTone(SPEAKER_PIN);
+  }
+  delay(10); 
+}
